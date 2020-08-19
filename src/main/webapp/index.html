@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+<div class="content">
+
+    <div class="content-form">
+        <form method="post" action="/login" onsubmit="return submitTest()" class="login-form">
+            <h1>Log In</h1>
+            <div class="txtb" id="change_margin_1">
+                <input class="username" type="text" name="username" onblur="oBlur_1()" onfocus="oFocus_1()">
+                <span data-placeholder="Username"></span>
+            </div>
+            <!-- input的value为空时弹出提醒 -->
+            <p id="remind_1"></p>
+            <div class="txtb" id="change_margin_2">
+                <input class="password" type="password" name="password" onblur="oBlur_2()" onfocus="oFocus_2()">
+                <span data-placeholder="Password"></span>
+            </div>
+            <!-- input的value为空时弹出提醒 -->
+            <p id="remind_2"></p>
+            <!--<input type="submit" class="logbtn" value="Log In">-->
+            <div id="change_margin_3">
+                <input class="logbtn" type="submit" onclick="#" value="login" style="font-size: 18px;">
+            </div>
+
+            <div class="bottom-text" style="font-size: 16px;">
+                Don't have account? <a class="content-login-link" href="/registration.html">Sign up</a>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+
+<script type="text/javascript">
+    $(".txtb input").on("focus", function () {
+        $(this).addClass("focus");
+    });
+    $(".txtb input").on("blur", function () {
+        if ($(this).val() == "")
+            $(this).removeClass("focus");
+    });
+</script>
+
+</body>
+
+</html>
