@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
-    <title>ChartRoom_WebSocket</title>
+    <title>Chatlib</title>
 
 
     <link rel="stylesheet" href="assets/css/bootstrap.css"/>
